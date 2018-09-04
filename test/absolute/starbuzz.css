@@ -8,24 +8,27 @@ body {
 header {
   background-color: #675c47;
   margin:           10px;
+  margin-bottom:    0px;
   height:           108px;
 }
-div#tableContainer {
-  display:          table;
-  border-spacing:   10px;
-}
-div#tableRow {
-  display:          table-row;
+
+header img#headerSlogan {
+  float:            right;
 }
 
-section#drinks {
+#award {
+  position:         absolute;
+  top:              30px;
+  left:             365px;
+}
+#drinks {
   display:          table-cell;
   background:       #efe5d0 url(images/background.gif) ;
   font-size:        105%;
   padding:          15px;
   vertical-align:   top;
 }
-section#main {
+#main {
   display:          table-cell;
   background:       #efe5d0 url(images/background.gif) top left;
   font-size:        105%;
@@ -51,7 +54,8 @@ footer {
   color:            #efe5d0;
   text-align:       center;
   padding:          15px;
-  margin:           0px 10px 10px 10px;
+  margin:           10px;
+  margin-top:       0px;
   font-size:        90%;
 }
 
@@ -78,12 +82,20 @@ a:visited {
   border-bottom:    thin dotted #675c47;
 }
 
-/*#allcontent {*/
-  /*width:            800px;*/
-  /*padding-top:      5px;*/
-  /*padding-bottom:   5px;*/
-  /*background-color: #675c47;*/
-  /*margin-left: auto;*/
-  /*margin-right: auto;*/
-/*}*/
+#tableContainer {
+  display:           table;
+  border-spacing:     10px;
+}
 
+#tableRow {
+  display:           table-row;
+}
+
+#coupon {
+  position:           fixed;
+  top:                350px;
+  left:               -90px;
+}
+#coupon a, img {
+  border:             none;
+}
