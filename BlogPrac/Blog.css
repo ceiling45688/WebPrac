@@ -1,0 +1,264 @@
+body {
+    font-family:            微软雅黑, Georgia, "Times New Roman", Times, serif;
+    margin:                 0px;
+    padding:                0px;
+    text-decoration:        none;
+}
+
+h1 {
+    font-size:              40px;
+    color:                  #efe5d0;
+}
+h2 {
+    font-size:              30px;
+    color:                  #c8b99c;
+}
+h3 {
+    font-size:              20px;
+    color:                  #d2b48c;
+}
+article p, #intro p, #volet p{
+    color:                  #eaf3da;
+}
+
+header {
+    width:                  100%;
+    height:                 auto;
+    background-image:       url("bg.jpg");
+    background-repeat:      no-repeat;
+    background-position:    center;
+}
+
+nav {
+    background:             transparent;
+    width:                  100%;
+    height:                 50px;
+    position:               fixed;
+}
+
+nav ul {
+    magin:                  0px;
+    padding:                5px 0px;
+    list-style-type:        none;
+    float:                  right;
+}
+nav ul li {
+    display:                inline;
+    padding:                0px 10px;
+}
+nav ul li a:link, nav ul li a:visited {
+    color:                  #888888;
+    border-bottom:          none;
+    text-decoration:        none;
+}
+/*导航结束*/
+
+.banner {
+    background:              transparent;
+    height:                  700px;
+    text-align:              center;
+}
+.banner .inner, .banner .button {
+    position:                relative;
+    top:                     200px;
+    left:                    40%;
+    max-width:               300px;
+}
+#button {
+    background-color:        gray;
+    border:                  none;
+    color:                   white;
+    border-radius:           12px;
+    text-align:             center;
+    text-decoration:        none;
+    display:                inline-block;
+    font-size:              16px;
+}
+#button{
+    cursor:                 pointer;
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+#button:hover {
+    background-color:        #f88396;
+}
+/*首部结束*/
+
+#volet {
+    width: 250px;
+    padding: 10px;
+    background: #6B9A49;
+    color: #fff;
+}
+
+#volet a.ouvrir,
+#volet a.fermer {
+    padding: 10px 25px;
+    background: #555;
+    color: #fff;
+    text-decoration: none;
+}
+
+#volet {
+    position: absolute;
+    left: -270px;  /* test fixed + scroll, on retire la position top */
+    -webkit-transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+    z-index: 5;
+}
+#volet a.ouvrir,
+#volet a.fermer {
+    position: absolute;
+    right: -88px;
+    top: 150px;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -moz-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px;
+}
+#volet a.fermer {
+    display: none;
+}
+#volet:target {
+    left: 10px;
+}
+
+/* code pour la fermeture */
+
+#volet:target a.fermer {
+    display: block;
+}
+#volet:target a.ouvrir {
+    display: none;
+}
+#volet_clos:target #volet {
+    left: -270px;
+}
+
+/* test fixed + scroll */
+#volet_clos {
+    position: fixed;
+    top: 55px; left: 0;
+    z-index: 5;
+}
+
+
+/*侧边弹出窗口*/
+
+div#tableContainer {
+    display:                table;
+    border-spacing:         0px;
+}
+div#tableRow {
+    display:                table-row;
+}
+section#blog {
+    display:                table-cell;
+    vertical-align:         top;
+    padding:                0px;
+    width:                  1344px;
+    background-image:       url("bg3.jpg");
+}
+
+article#PartOne {
+    width:                  auto;
+    height:                 288px;
+    border:                 inset #888888 5px;
+}
+article#PartOne .video {
+    position:               relative;
+    float:                  left;
+    margin:                 0px;
+    z-index: 1;
+}
+
+article#PartTwo {
+    width:                  auto;
+    height:                 334px;
+    border:                 outset #d2b48c 5px;
+}
+article#PartTwo .img1 {
+    position:               relative;
+    float:                  right;
+    margin:                 0px;
+}
+
+
+article#PartThree {
+    border:                 inset #b76666 5px;
+    height:                 477px;
+}
+article#PartThree .img2 {
+    position:               relative;
+    float:                  left;
+    margin:                 0px;
+    z-index: 1;
+}
+
+section#intro {
+    display:                table-cell;
+    vertical-align:         top;
+    width:                  576px;
+    background-color:       #444444;
+
+}
+section#intro p {
+    text-align:             center;
+}
+section#intro p img{
+    background:             transparent;
+}
+
+#intro p a {
+    color:                  #d2b48c;
+}
+#intro p a:hover {
+    color:                  yellow;
+}
+.slogan {
+    font-size:              30px;
+    text-align:             center;
+}
+.card {
+    position:               relative;
+    float:                  right;
+    right:                  0px;
+    width:                  100%;
+}
+.card:nth-child(odd){
+    background:             rgba(0,0,0,0.09);
+
+}
+.card:nth-child(even) {
+    background:             rgba(0,0,0,0.2);
+}
+
+footer {
+    background-color:       #333333;
+    height:                 200px;
+    border:                 groove #334 5px;
+}
+footer ul{
+    display:                inline-block;
+    position:               relative;
+    left:                   600px;
+}
+footer ul li {
+    display:                inline-block;
+    margin:                 30px;
+}
+.end span {
+    display:                 inline-block;
+    position:                relative;
+    left:                    850px;
+    color:                   #eaf3da;
+    font-style:              oblique;
+    font-size:               large;
+}

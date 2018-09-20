@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyBlog</title>
+    <link rel="stylesheet" type="text/css" href="Blog.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a> </li>
+                <li><a href="">My Weibo</a> </li>
+                <li><a href="">Contact Me</a></li>
+            </ul>
+        </nav>
+
+        <div class="banner">
+            <div class="inner">
+                <h1>Ceiling</h1>
+                <p>somewords</p>
+            </div>
+            <div class="button">
+                <button id="button">了解我</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="volet_clos">
+        <div id="volet">
+            <p class="search">搜索框</p>
+            <p><a href="#Sep">九月</a></p>
+            <p><a href="#Aug">八月</a> </p>
+            <p><a href="#Jul">七月</a> </p>
+
+            <a href="#volet" class="ouvrir" aria-hidden="true">滑出</a>
+            <a href="#volet_clos" class="fermer" aria-hidden="true">滑入</a>
+        </div>
+    </div>
+
+    <div id="tableContainer">
+        <div id="tableRow">
+            <section id="blog">
+                <article id="PartOne" >
+                    <div class="video">
+                        <video controls width="512" height="288"
+                               id="tkdvideo" src="tkdvideo.mp4">
+                        </video>
+                    </div>
+                    <a name="Sep"><h1>title one</h1></a>
+                    <time datetime="2018/9/18">Sep.18 2018</time>
+                    <p>balbaba</p>
+                </article>
+
+                <article id="PartTwo">
+                    <div class="img1" alt=" ">
+                        <img src="p1.jpg">
+                    </div>
+                    <a name="Aug"> <h1>title two</h1></a>
+                    <time datetime="2018/8/18">Aug.18 2018</time>
+                    <p>balabalaba</p>
+                </article>
+
+                <article id="PartThree">
+                    <div class="img2" alt=" ">
+                        <img src="p2.jpg">
+                    </div>
+                    <a name="Jul"><h1>title three</h1></a>
+                    <time datetime="2018/7/18">Aug.18 2018</time>
+                    <p>blababbbbbb</p>
+                </article>
+            </section>
+
+            <section id="intro">
+                <p>
+                    <img src="github.jpg" alt=""> <br>
+                    My github:<br>
+                    <a href="https://github.com/ceiling45688">ceiling45688</a><br>
+                </p>
+                <p class="slogan">THANK</p>
+                <p class="slogan">YOU </p>
+                <p class="slogan">EVERYBODY</p>
+                <div class="card">
+                    <h3>HTML/CSS</h3>
+                    <p>blablalba</p>
+                </div>
+                <div class="card">
+                    <h3>HTML/CSS</h3>
+                    <p>blablalba</p>
+                </div>
+                <div class="card">
+                    <h3>HTML/CSS</h3>
+                    <p>blablalba</p>
+                </div>
+                <div class="card">
+                    <h3>HTML/CSS</h3>
+                    <p>blablalba</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <footer>
+        <ul>
+            <li><img src="music.png"></li>
+            <li><img src="camera.png"></li>
+            <li><img src="light.png"></li>
+            <li><img src="huanbao.png"></li>
+        </ul>
+        <div class="end">
+            <span>Sep.2018  Ceiling</span>
+        </div>
+    </footer>
+</body>
+</html>
