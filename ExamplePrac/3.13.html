@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标记对象范例</title>
+    <!--编写一个网页文件，使其中的大标题会自动的以红绿蓝黄的顺序反复改变颜色-->
+    <script language="JavaScript">
+        <!--
+        var n = 0;
+        function changeFontColor() {
+            n %= 4;
+            switch (n) {
+                case 0:
+                    document.getElementById("main_title").style.color = "red";
+                    break;
+                case 1:
+                    document.getElementById("main_title").style.color = "green";
+                    break;
+                case 2:
+                    document.getElementById("main_title").style.color = "blue";
+                    break;
+                case 3:
+                    document.getElementById("main_title").style.color = "yellow";
+                    break;
+            }
+            n++;
+        }
+            //-->
+    </script>
+</head>
+<body>
+    <h1 id="main_title">虚拟网络害人不浅</h1>
+    <script language="JavaScript">
+        setInterval("changeFontColor()", 1000);
+    </script>
+</body>
+</html>
