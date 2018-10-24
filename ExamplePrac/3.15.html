@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽奖程序</title>
+    <!--【例3.15】：实现一个抽奖程序：页面中连续快速随机显示1000~3000之间的4位数号码，
+    当按下暂停按钮时停止并显示抽中的数据。再加一个继续的按钮。-->
+    <script type="text/javascript">
+        <!--
+        var r;
+        function randomNum() {
+            var next_num = Math.floor(Math.random()*2000)+1000;
+            document.getElementById("num").innerHTML = next_num;
+        }
+            //-->
+    </script>
+</head>
+<body >
+    <h1 id="num">0000</h1>
+    <button id="go" onclick='setInterval("randomNum()",100)'>继续</button>
+    <button id="stop" onclick="clearInterval(r)">暂停</button>
+    <script type="text/javascript">
+        <!--
+           r = setInterval("randomNum()",100);
+            //-->
+    </script>
+</body>
+</html>
