@@ -8,8 +8,15 @@
     <script>
         function validataForm() {
             var x = document.forms["myForm"]["username"].value;
-            if ( x === null || x == "" ){
+            if ( x === null || x === "" ){
                 alert("Please input username!");
+                return false;
+            }
+            var y = document.forms["myForm"]["email"].value;
+            var atpos = y.indexOf("@");
+            var dotpos = y.lastIndexOf(".");
+            if (atpos < 1 || dotpos < atpos+2 || dotpos+2 >= y.length){
+                alert("Wrong Email-Address!");
                 return false;
             }
         }
@@ -17,7 +24,8 @@
 </head>
 <body>
     <form action="" method="post" name="myForm" onsubmit="validataForm()">
-        Username:<input id="username" type="text">
+        Username: <input type="text" name="username" >
+        Email: <input type="text" name="email">
         <input type="submit" value="提交">
     </form>
 
