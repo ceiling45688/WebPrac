@@ -3,49 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Image Gallery</title>
-    <script type="text/javascript">
-        <!--
-        function showPic(whichpic) {
-            var srouce = whichpic.getAttribute("href");
-            var placeholder = document.getElementById("placeholder");
-            placeholder.setAttribute("src",srouce);
-
-            var text = whichpic.getAttribute("title");
-            var description = document.getElementById("description");
-            description.firstChild.nodeValue = text;
-        }
-            //-->
-    </script>
-    <style>
-        body {
-            font-family: "微软雅黑", Helvatica ,Arial;
-            color: #333;
-            background-color: #ccc;
-            margin: 1em 10%;
-        }
-        h1 {
-            color: #333;
-            background-color: transparent;
-        }
-        a {
-            color: #c60;
-            background-color: transparent;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        ul {
-            padding:  0;
-        }
-        li {
-            float: left;
-            padding: 1em;
-            list-style: none;
-        }
-        img {
-            display: block;
-            clear: both;
-        }
-    </style>
+    <link rel="stylesheet" href="IG.css" media="screen">
 </head>
     <body>
         <h1>Oil painting</h1>
@@ -57,5 +15,6 @@
         </ul>
         <img id="placeholder" src="乖巧.jpg" alt="乖巧" width="500" height="520">
         <p id="description">Choose an image.</p>
+        <script src="IG.js"></script>
     </body>
 </html>
