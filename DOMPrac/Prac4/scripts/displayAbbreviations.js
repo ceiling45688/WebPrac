@@ -6,6 +6,7 @@ function displayAbbreviations() {
        if (abbreviations.length <1 ) return false;
        var defs = new Array();
        for (var i=0; i<abbreviations.length; i++) {
+           if (abbreviations[i].childNodes.length < 1) continue;//IE6以前平稳退化
            var definition = abbreviations[i].getAttribute("title");
            var key = abbreviations[i].lastChild.nodeValue;
            defs[key] = definition;
@@ -23,6 +24,7 @@ function displayAbbreviations() {
            dlist.appendChild(dtitle);
            dlist.appendChild(ddesc);
        }
+       if(dlist.childNodes.length < 1) return false;
        //创建标题
        var header = document.createElement("h2");
        var header_text = document.createTextNode("Abbreviations");
