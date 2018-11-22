@@ -8,7 +8,7 @@
 class Site {
     var $url;
     function __construct(){
-        echo "这是构造函数"."<br>";
+        echo "这是构造函数1"."<br>";
     }
     function setUrl($p) {
         $this->url = $p;
