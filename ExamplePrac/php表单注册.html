@@ -5,23 +5,16 @@
     <title>Title</title>
 </head>
     <body>
-    <?php
-if (!isset($_POST["submit"])){
-    echo $_POST["name"];
-    $cars = $_POST["cars"];
-    foreach ($cars as $variable){
-        echo $variable;
-    }
-}?>
-        <form action=" " method="post">
-            name:<input type="text" id="name">;
-            <select name="cars[]">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
-            <input type="submit" value="Submit" name="submit">;
+        <form action="php表单后台.php" method="post">
+            <!--<select name="cars[]">-->
+                <!--<option value="volvo">Volvo</option>-->
+                <!--<option value="saab">Saab</option>-->
+                <!--<option value="mercedes">Mercedes</option>-->
+                <!--<option value="audi">Audi</option>-->
+            <!--</select>-->
+            username:<input name="username" id="username" type="text"><br>
+            love cars: <input name="lovecar" id="lovecar" type="text"><br>
+            <input type="submit" value="Submit" name="submit">
         </form>
     </body>
 </html>
