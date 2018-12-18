@@ -17,6 +17,7 @@ echo "<hr>";
 $today = getdate();
 print_r($today);
 echo "<br>";
-$anotherday = getdate("0,0,0,7,1,2000");
+$anotherday = getdate(mktime(0,0,0,7,8,2017));
+//指定时间戳用mktime()
 print_r($anotherday);
 ?>
