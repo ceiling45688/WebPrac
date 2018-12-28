@@ -1,0 +1,25 @@
+body {
+    font-family: "微软雅黑", Helvatica , Arial;
+    font-size: large;
+}
+table {
+    margin: 20px 0 20px 0;
+    border: thin solid black;
+    caption-side: top;
+    border-collapse: collapse;
+}
+caption {
+    font-style: italic;
+}
+td, th {
+    border:thin dotted gray;
+}
+tr:nth-child(odd),#submit {
+    background-color: #d2b48c;
+}
+#major {
+    border: none;
+}
+#submit {
+    border-radius: 25px;
+}

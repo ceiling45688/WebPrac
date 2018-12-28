@@ -3,17 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css.css" type="text/css">
 </head>
     <body>
         <form action="php表单后台.php" method="post" name="myForm" onsubmit="return isValidata()">
-            姓名:<input name="name" id="name" type="text"><br>
-            年龄: <input name="age" id="age" type="text"><br>
-            email:<input name="email" id="email" type="text"><br>
-            专业:<br>
-            <input name="majors[]" id="cs" type="checkbox" value="计算机科学与技术">计算机科学与技术<br>
-            <input name="majors[]" id="ce" type="checkbox" value="通信工程">通信工程<br>
-            <input name="majors[]" id="en" type="checkbox" value="英语">英语<br>
-            <input type="submit" value="Submit" name="submit">
+           <table>
+               <caption>表单验证</caption>
+               <tr>
+                   <th>姓名</th>
+                   <td><input name="name" id="name" type="text"></td>
+               </tr>
+               <tr>
+                   <th>年龄</th>
+                   <td><input name="age" id="age" type="text"></td>
+               </tr>
+               <tr>
+                   <th>邮件</th>
+                   <td><input name="email" id="email" type="text"></td>
+               </tr>
+               <tr>
+                   <th>专业</th>
+                   <td>
+                       <table id="major" >
+                           <tr>
+                               <td>
+                                   <input name="majors[]" id="cs" type="checkbox"
+                                          value="计算机科学与技术">计算机科学与技术
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                   <input name="majors[]" id="ce" type="checkbox"
+                                          value="通信工程">通信工程
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                   <input name="majors[]" id="en" type="checkbox"
+                                          value="英语">英语
+                               </td>
+                           </tr>
+                       </table>
+                   </td>
+               </tr>
+           </table>
+
+            <input type="submit" value="Submit" name="submit" id="submit">
         </form>
     </body>
     <script src="js.js"></script>
