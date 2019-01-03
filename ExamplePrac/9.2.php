@@ -12,7 +12,7 @@
  echo "连接成功！<br>";
  @mysqli_select_db("test",$link);
  if (@mysqli_errno()){
-     echo "数据库选择失败！<br>";
+     echo "数据库选择 失败！<br>";
      die();
  }
  echo "数据库选择成功！<br>";
