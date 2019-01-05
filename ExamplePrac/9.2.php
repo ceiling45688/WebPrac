@@ -4,20 +4,23 @@
  * User: celing
  * Date: 2019/1/2
  * Time: 23:43
- */$link = mysqli_connect("localhost","root","2016212888");
- if (!@$link) {
-     echo "连接失败！ <br>";
+ */
+$link = mysqli_connect("localhost","root","2016212888");
+if (!@$link) {
+    echo "连接失败！ <br>";
     die();
- }
- echo "连接成功！<br>";
- @mysqli_select_db("test",$link);
- if (@mysqli_errno()){
-     echo "数据库选择 失败！<br>";
-     die();
- }
- echo "数据库选择成功！<br>";
+}
+echo "连接成功！<br>";
 
- mysqli_query($link,"CREATE TABLE mysql_php_prac(xh CHAR (9) NOT NULL ,xm CHAR(9))" or die("失败！"));
- echo "success!";
+mysqli_select_db($link,"student_db")or die("连接数据库失败！");
+echo "数据库选择成功！<br>";
+
+$sql  = "CREATE TABLE if NOT EXISTS test4 (xh CHAR (10) NOT NULL ,xm CHAR(10) NOT NULL)";
+//不一定要分开拼接字符串，但是一定注意要写（）还有if not exists！
+//$sql .= "xm char(10) not null)";
+
+mysqli_query($link,$sql)or die("失败！");
+//参数顺序有关系，先link再sql语句-->mysqli函数。
+echo "success!";
 
  ?>
