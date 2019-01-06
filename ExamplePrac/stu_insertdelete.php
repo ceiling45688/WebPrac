@@ -14,7 +14,7 @@ echo "select successfully! <br>";
 //echo "insert successfully!"
 //注意双引号里面单引号。
 //---------------delete---------
-$sql ="delete from test WHERE xh='854'";
+$sql ="delete from test WHERE xh ='854'";
 if (mysqli_query($link,$sql)){
     echo "delete successfully! <br>";
 }else
