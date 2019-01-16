@@ -4,8 +4,9 @@
 	<meta charset="utf-8">
 	<title>apartment message</title>
 	<link id="bootstrap-style" href="css/bootstrap.css" rel="stylesheet">
-<!--	<link id="base-style" href="css/style.css" rel="stylesheet">-->
-</head>
+    <style type="text/css">
+        body { background: url(img/bg2.jpg) ;background-size: 100% ;background-repeat: no-repeat }
+    </style></head>
 
 <body>
 		<!-- start: Header -->
@@ -56,7 +57,6 @@
                 <form action="tasks.php" method="post">
                     楼栋号：
                     <select name="Bnumber" style="width:100px;color:white;background: #4bb1cf" >
-                        <option select="selected"><?php echo $_POST['Bnumber']?></option>
                         <option value=" 宁静苑一舍">宁静苑一舍</option>
                         <option value="宁静苑二舍">宁静苑二舍</option>
                         <option value="宁静苑三舍">宁静苑三舍</option>
@@ -64,7 +64,6 @@
                     </select>
                     楼层：
                     <select name="Fnumber" style="width:100px;color:white;background: #4bb1cf">
-                        <option select="selected"><?php echo $_POST['Fnumber']?></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -72,7 +71,6 @@
                     </select>
                     宿舍号：
                     <select name="Dnumber" style="width:100px;color:white;background: #4bb1cf">
-                        <option select="selected"><?php echo $_POST['Dnumber']?></option>
                         <option value="01">01</option>
                         <option value="02">02</option>
                         <option value="03">03</option>
@@ -103,7 +101,7 @@
 
                 include "conn.php";
 
-                if(!empty($_POST[sub]))
+                if(!empty($_POST['sub']))
                 {
 
                         $Bnum = $_POST['Bnumber'];

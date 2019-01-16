@@ -5,12 +5,14 @@
     <!-- start: Meta -->
     <meta charset="utf-8">
     <title>index</title>
-<!--    <link id="base-style" href="css/style.css" rel="stylesheet">-->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        body { background: url(img/bg2.jpg) ;background-size: 100% ;background-repeat: no-repeat }
+    </style>
 </head>
 
 <body>
-<!-- start: Header -->
+
 <div class="navbar">
     <div class="navbar-inner">
         <div class="container-fluid">
@@ -50,9 +52,8 @@
         </div>
         <!-- end: Main Menu -->
 
-
-            <div align="center">
-                <h1>欢迎来到学生宿舍管理系统</h1>
+            <div style="padding-left: 35%">
+                <h1 style="color: white">欢迎来到学生宿舍管理系统</h1>
             </div>
 
 

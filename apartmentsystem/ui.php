@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
-	<!-- start: Meta -->
 	<meta charset="utf-8">
 	<title>student information</title>
     <link href="css/bootstrap.css" rel="stylesheet">
-		
+    <style type="text/css">
+        body { background: url(img/bg2.jpg) ;background-size: 100% ;background-repeat: no-repeat }
+    </style>
 		
 </head>
 
@@ -78,7 +78,7 @@
                 <?php
 
                     include "conn.php";
-                    if(!empty($_POST[sub]))
+                    if(!empty($_POST['sub']))
                     {
 
                         if(empty($_POST['number'])||empty($_POST['name'])||empty($_POST['sex'])||empty($_POST['age'])||empty($_POST['dept'])||empty($_POST['phone'])||empty($_POST['Bnumber'])||empty($_POST['Dnumber']))

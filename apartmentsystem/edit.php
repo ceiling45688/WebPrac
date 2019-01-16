@@ -6,6 +6,9 @@
 	<meta charset="utf-8">
 	<title>Bootstrap Metro Dashboard by Dennis Ji for ARM demo</title>
     <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        body { background: url(img/bg2.jpg) ;background-size: 100% ;background-repeat: no-repeat }
+    </style>
 </head>
 
 <body>
