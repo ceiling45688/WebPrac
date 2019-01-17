@@ -57,10 +57,10 @@
                 <form action="tasks.php" method="post">
                     楼栋号：
                     <select name="Bnumber" style="width:100px;color:white;background: #4bb1cf" >
-                        <option value=" 宁静苑一舍">宁静苑一舍</option>
-                        <option value="宁静苑二舍">宁静苑二舍</option>
-                        <option value="宁静苑三舍">宁静苑三舍</option>
-                        <option value="宁静苑四舍">宁静苑四舍</option>
+                        <option value=" 1">宁静苑一舍</option>
+                        <option value="2">宁静苑二舍</option>
+                        <option value="3">宁静苑三舍</option>
+                        <option value="4">宁静苑四舍</option>
                     </select>
                     楼层：
                     <select name="Fnumber" style="width:100px;color:white;background: #4bb1cf">
@@ -101,25 +101,32 @@
 
                 include "conn.php";
 
-                if(!empty($_POST['sub']))
+                if(!empty($_POST["sub"]))
                 {
 
-                        $Bnum = $_POST['Bnumber'];
-                        $Fnum = $_POST['Fnumber'];
-                        $Dnum = $_POST['Dnumber'];
+                        $Bnum = $_POST["Bnumber"];
+                        $Fnum = $_POST["Fnumber"];
+                        $Dnum = $_POST["Dnumber"];
                         $Dnum ="$Fnum"."$Dnum";
 
 
-                        $sql = "select * from dorm where Bnumber='$Bnum' AND Dnumber='$Dnum'";
+                        $sql = "select * from dorm where Bnumber=$Bnum AND Dnumber=$Dnum";
 
 
                         $query = $db->query($sql);
                          $rs=$query->fetch_array();
 
-                         $sql2="select *from stu_dorm where Bnumber='$Bnum' AND Dnumber='$Dnum'";
+                         $sql2="select *from stu_dorm where Bnumber=$Bnum AND Dnumber=$Dnum";
                          $query2=$db->query($sql2);
 
-
+                         //统计宿舍人数
+                        $sql4 = "SELECT COUNT(Snumber)
+                                  FROM dorm,stu_dorm
+                                  WHERE dorm.Bnumber=stu_dorm.Bnumber AND
+                                  dorm.Dnumber = stu_dorm.Dnumber AND 
+                                  dorm.Bnumber=$Bnum AND dorm.Dnumber=$Dnum";
+                        $query4 = $db->query($sql4);
+                        $rs4=$query4->fetch_array();
 
                         ?>
                     <h2>宿舍信息：</h2>
@@ -134,7 +141,7 @@
                     <tr>
                      <td align="center"><?php echo $rs['Bnumber'] ?></td>
                     <td align="center"><?php echo $rs['Dnumber'] ?></td>
-                    <td align="center"><?php echo $rs['people'] ?></td>
+                    <td align="center"><?php echo $rs4[0]?></td>
                     </tr>
                 </table>
                     <h2>宿舍人员信息：</h2>
@@ -151,7 +158,7 @@
                     while($rs2=$query2->fetch_array())
                     {
                         $Snum = $rs2['Snumber'];
-                            $sql3 = "select *from student where number='$Snum'";
+                            $sql3 = "select * from student where number=$Snum";
                             $query3 = $db->query($sql3);
                             $rs3 = $query3->fetch_array();
                             ?>

@@ -63,10 +63,10 @@
                     专业：<input type="text" name="dept"><br>
                     联系方式：<input type="text" name="phone"><br>
                     楼栋号：<select name="Bnumber" style="width:100px;color:white;background-color: #4bb1cf" >
-                            <option value=" 宁静苑一舍">宁静苑一舍</option>
-                            <option value="宁静苑二舍">宁静苑二舍</option>
-                            <option value="宁静苑三舍">宁静苑三舍</option>
-                            <option value="宁静苑四舍">宁静苑四舍</option>
+                            <option value="1">宁静苑一舍</option>
+                            <option value="2">宁静苑二舍</option>
+                            <option value="3">宁静苑三舍</option>
+                            <option value="4">宁静苑四舍</option>
                              </select><br>
                     宿舍号：<input type="text" name="Dnumber"><br>
 

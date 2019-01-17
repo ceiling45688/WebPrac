@@ -4,7 +4,7 @@
 	
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>Bootstrap Metro Dashboard by Dennis Ji for ARM demo</title>
+	<title>edit information</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
         body { background: url(img/bg2.jpg) ;background-size: 100% ;background-repeat: no-repeat }
@@ -59,10 +59,10 @@
 
                     if(!empty($_GET['id'])) {
                         $num = $_GET['id'];
-                        $sql = "select *from Student where number='$num'";
+                        $sql = "select *from student where number=$num";
                         $query = $db->query($sql);
                         $rs = $query->fetch_array();
-                        $sql2="select *from stu_dorm where Snumber='$num'";
+                        $sql2="select *from stu_dorm where Snumber=$num";
                         $query2=$db->query($sql2);
                         $rs2=$query2->fetch_array();
                     }
@@ -79,10 +79,10 @@
                     联系方式：<input type="text" name="phone" value=<?php echo $rs['phone']?>><br>
                     楼栋号：<select name="Bnumber" style="width:100px;color:white;background-color: #4bb1cf" >
                         <option select="selected"><?php echo $rs2['Bnumber']?></option>
-                        <option value=" 宁静苑一舍">宁静苑一舍</option>
-                        <option value="宁静苑二舍">宁静苑二舍</option>
-                        <option value="宁静苑三舍">宁静苑三舍</option>
-                        <option value="宁静苑四舍">宁静苑四舍</option>
+                        <option value="1">宁静苑一舍</option>
+                        <option value="2">宁静苑二舍</option>
+                        <option value="2">宁静苑三舍</option>
+                        <option value="4">宁静苑四舍</option>
                     </select><br>
                     宿舍号：<input type="text" name="Dnumber" value=<?php echo $rs2['Dnumber']?>><br>
 
@@ -93,7 +93,7 @@
                 <?php
 
                 include "conn.php";
-                if(!empty($_POST[sub]))
+                if(!empty($_POST['sub']))
                 {
 
                         if(empty($_POST['dept'])||empty($_POST['phone'])||empty($_POST['Bnumber'])||empty($_POST['Dnumber']))
@@ -109,11 +109,10 @@
                             $Bnum = $_POST['Bnumber'];
                             $Dnum = $_POST['Dnumber'];
 
-                            $sql3 = "update student set dept='$dept',phone='$phone' where number='$number' ";
+                            $sql3 = "update student set dept=$dept,phone=$phone where number=$number ";
                             $db->query($sql3);
-                            $sql4 = "update stu_dorm set Bnumber='$Bnum',Dnumber='$Dnum ' where Snumber='$number'";
+                            $sql4 = "update stu_dorm set Bnumber=$Bnum,Dnumber=$Dnum  where Snumber=$number";
                             $db->query($sql4);
-
 
                             ?>
                             <h3>学生信息修改成功</h3>

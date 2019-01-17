@@ -73,7 +73,7 @@
                 $query=$db->query($sql);
                 $rs=$query->fetch_array();
 
-                        $sql2="select *from stu_dorm where Snumber='$keys'";
+                        $sql2="select *from stu_dorm where Snumber=$keys";
                         $query2=$db->query($sql2);
                         $rs2=$query2->fetch_array();
 
