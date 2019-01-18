@@ -5,7 +5,7 @@
  * Date: 2018/12/21
  * Time: 21:01
  */
-$handle = fopen("https://blog.csdn.net/qq_29729735/article/details/80781329", "r");
+$handle = fopen("3.8.html", "r");
 //fopen()打开失败？？php.ini中已经设置。
 
 /*通过 include 或 require 语句，可以将 PHP 文件的内容插入另一个 PHP 文件（在服务器执行它之前）。

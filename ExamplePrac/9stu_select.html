@@ -1,0 +1,96 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>学生查询结果</title>
+</head>
+<body>
+<?php
+  $xm=$_GET["xm"];
+  if ($xm=="")  {
+    echo "请输入欲查询学生的姓名！";
+    die();
+  }
+  if(@$_GET["pageno"]==NULL){
+      $pageno=1;
+  }
+  else {
+    $pageno=$_GET["pageno"];
+  }
+  $xm=trim($xm);
+
+  $xm0="%".$xm."%";
+  $link=mysqli_connect("localhost","root","123456")
+    or die("数据库服务器连接失败！<BR>");
+mysqli_select_db($link,"student_db") or die("数据库选择失败！<BR>");
+#mysqli_query($link,"set names 'gbk'");
+$sql="select * from student_info";
+$sql.=" where sname like '$xm0' order by sno";
+echo $sql;
+$result=mysqli_query($link,$sql);
+$rows=mysqli_num_rows($result);  //总记录数
+if ($rows==0)  {
+echo "没有满足条件的记录！";
+die();
+}
+$pagesize=2;  //每页的记录数（在此暂设为2，通常应设为10）
+$pagecount=ceil($rows/$pagesize);  //总页数
+//$pageno的值为当前页的页号
+if (!isset($pageno)||$pageno<1)
+$pageno=1;
+if ($pageno>$pagecount)
+$pageno=$pagecount;
+$offset=($pageno-1)*$pagesize;
+mysqli_data_seek($result,$offset);
+?>
+<div align="center"><strong>学生查询结果</strong> </div>
+<table width="90%" border="1" align="center">
+    <tr>
+        <td><div align="center">学号</div></td>
+        <td><div align="center">姓名</div></td>
+        <td><div align="center">性别</div></td>
+        <td><div align="center">操作</div></td>
+    </tr>
+    <?php
+  $i=0;
+  while($row=mysqli_fetch_array($result))//fetch_row对下标自动编号，fetch_object
+  {
+?>
+    <tr>
+        <td><div align="center"><?php echo $row['sno']; ?></div></td>
+        <td><div align="center"><?php echo $row['sname']; ?></div></td>
+        <td><div align="center"><?php echo $row['ssex']; ?></div></td>
+        <td><div align="center">
+            <a href="student_update_edit.php?Sno=<?php echo $row['sno']; ?>" target="_blank">修改</a>
+            <a href="student_delete.php?Sno=<?php  echo $row['sno']; ?>" target="_blank" onclick="return confirm('确定要删除吗？')">删除</a>
+        </div></td>
+    </tr>
+    <?php
+  $i=$i+1;
+  if ($i==$pagesize)
+    break;
+  }
+  mysqli_free_result($result);
+  mysqli_close($link);
+?>
+</table>
+<div align="center">
+    [第<?php echo $pageno; ?>页/共<?php echo $pagecount; ?>页]
+    <?php
+$href=$_SERVER['PHP_SELF']."?xm= ".urlencode($xm);
+if ($pageno<>1){
+    ?>
+    <a href="<?php echo $href; ?>&pageno=1">首页</a>
+    <a href="<?php echo $href; ?>&pageno=<?php echo $pageno-1; ?>">上一页</a>
+    <?php
+}
+if ($pageno<>$pagecount){
+    ?>
+    <a href="<?php echo $href; ?>&pageno=<?php echo $pageno+1; ?>">下一页</a>
+    <a href="<?php echo $href; ?>&pageno=<?php echo $pagecount; ?>">尾页</a>
+    <?php
+}
+?>
+    [共找到<?php echo $rows; ?>个记录]
+</div>
+</body>
+</html>
