@@ -8,11 +8,4 @@ if (isset($_POST["submit"])){
              echo $variable."<br>";
     }
 }
-
-/**
- * Created by PhpStorm.
- * User: celing
- * Date: 2018/11/7
- * Time: 20:17
- */
  ?>
