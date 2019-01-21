@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 	
-	<!-- start: Meta -->
 	<meta charset="utf-8">
 	<title>information management</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
@@ -12,7 +11,6 @@
 </head>
 
 <body>
-		<!-- start: Header -->
 		<div class="navbar">
 			<div class="navbar-inner">
 				<div class="container-fluid">
@@ -29,11 +27,10 @@
                                     <li><a href="login.php"><i class="halflings-icon off"></i> 退出登录</a></li>
 						</ul>
 					</div>
-				<!-- end: Header Menu -->
-				
-			</div>
-		</div>
-	</div>
+
+			    </div>
+            </div>
+	    </div>
 	<!-- start: Header -->
 	
 		<div class="container-fluid-full">
@@ -58,12 +55,11 @@
                     学号：<input type="text" name="keys" " >
                     <input type="submit" name="sub" value="点击查询">
                 </form>
-
-
+            </div>
+        </div>
+        </div>
                 <?php
-
                 include "conn.php";
-
                 if(!empty($_POST['sub']))
                 {
                 $keys=$_POST['keys'];
@@ -99,7 +95,8 @@
                             <td align="center"><?php echo $rs['dept'] ?></td>
                             <td align="center"><?php echo $rs['phone'] ?></td>
                             <td align="center"><?php echo $rs2['Bnumber']."".$rs2['Dnumber'] ?></td>
-                            <td align="center"><a href="delete.php?id=<?php echo $rs['number'] ?>">删除</a> <a href="edit.php?id=<?php echo $rs['number'] ?>">修改</a> </td>
+                            <td align="center"><a href="delete.php?id=<?php echo $rs['number'] ?>">删除</a>
+                                <a href="edit.php?id=<?php echo $rs['number'] ?>">修改</a> </td>
 
                         </tr>
                 </table>

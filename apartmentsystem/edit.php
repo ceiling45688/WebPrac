@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 	
-	<!-- start: Meta -->
 	<meta charset="utf-8">
 	<title>edit information</title>
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -12,7 +11,6 @@
 </head>
 
 <body>
-		<!-- start: Header -->
 		<div class="navbar">
 			<div class="navbar-inner">
 				<div class="container-fluid">
@@ -23,21 +21,17 @@
 					</a>
 					<a class="brand"><span>学生宿舍管理系统</span></a>
 
-					<!-- start: Header Menu -->
 					<div class="nav-no-collapse header-nav">
 						<ul class="nav pull-right"
                                     <li><a href="login.php"><i class="halflings-icon off"></i> 退出登录</a></li>
 						</ul>
 					</div>
-				<!-- end: Header Menu -->
-				
-			</div>
-		</div>
-	</div>
-	<!-- start: Header -->
-	
-		<div class="container-fluid-full">
-		<div class="row-fluid">
+			    </div>
+		    </div>
+	    </div>
+
+        <div class="container-fluid-full">
+		    <div class="row-fluid">
 				
 			<!-- start: Main Menu -->
 			<div id="sidebar-left" class="span2">
@@ -51,7 +45,9 @@
 				</div>
 			</div>
 			<!-- end: Main Menu -->
-			
+            </div>
+        </div>
+
 			<!-- start: Content -->
 			<div id="content" class="span10">
                 <?php
@@ -145,8 +141,7 @@
 
 
                 ?>
-
-
+            </div>
 	
 </body>
 </html>

@@ -13,6 +13,7 @@
 
 <body>
 
+<!--导航栏-->
 <div class="navbar">
     <div class="navbar-inner">
         <div class="container-fluid">
@@ -23,23 +24,23 @@
             </a>
             <a class="brand" ><span>学生宿舍管理系统</span></a>
 
-            <!-- start: Header Menu -->
+            <!-- 返回登录界面 -->
             <div class="nav-no-collapse header-nav">
                 <ul class="nav pull-right">
                             <li><a href="login.php"><i class="halflings-icon off"></i> 退出登录</a></li>
                 </ul>
             </div>
-            <!-- end: Header Menu -->
+            <!-- 返回登录界面 -->
 
         </div>
     </div>
 </div>
-
+<!--导航栏-->
 
 <div class="container-fluid-full">
     <div class="row-fluid">
 
-        <!-- start: Main Menu -->
+        <!-- 侧边栏 -->
         <div id="sidebar-left" class="span2">
             <div class="nav-collapse sidebar-nav">
                 <ul class="nav nav-tabs nav-stacked main-menu">
@@ -50,12 +51,14 @@
                 </ul>
             </div>
         </div>
-        <!-- end: Main Menu -->
-
+        <!-- 侧边栏 -->
+        <!--主页内容-->
             <div style="padding-left: 35%">
                 <h1 style="color: white">欢迎来到学生宿舍管理系统</h1>
             </div>
-
+        <!--主页内容-->
+    </div>
+</div>
 
 </body>
 </html>

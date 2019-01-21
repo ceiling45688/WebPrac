@@ -9,7 +9,7 @@
     </style></head>
 
 <body>
-		<!-- start: Header -->
+		<!--导航栏 -->
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container-fluid">
@@ -20,24 +20,20 @@
                     </a>
                     <a class="brand" ><span>学生宿舍管理系统</span></a>
 
-                    <!-- start: Header Menu -->
                     <div class="nav-no-collapse header-nav">
                         <ul class="nav pull-right">
                             <li><a href="login.php"><i class="halflings-icon off"></i> 退出登录</a></li>
                         </ul>
                     </div>
-                    <!-- end: Header Menu -->
-
                 </div>
             </div>
         </div>
-
-	<!-- start: Header -->
+	    <!-- 导航栏  -->
 	
 		<div class="container-fluid-full">
 		<div class="row-fluid">
 				
-			<!-- start: Main Menu -->
+			<!-- 主菜单侧边栏 -->
 			<div id="sidebar-left" class="span2">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
@@ -48,9 +44,9 @@
 					</ul>
 				</div>
 			</div>
-			<!-- end: Main Menu -->
+			<!-- 主菜单侧边栏 -->
 			
-			<!-- start: Content -->
+			<!-- 查询表单内容 -->
 			<div id="content" class="span10">
 
                 <h2>请输入查询的宿舍信息：</h2>

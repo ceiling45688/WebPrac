@@ -52,7 +52,7 @@ if(!empty($_POST['sub']))
     $sql="select * from manager where number=$num  ";
     $result=$db->query($sql);//按条件查询
 
-    $num_row=mysqli_num_rows($result);//查询manager表中行数
+    $num_row=mysqli_num_rows($result);//查询manage表中行数
     if($num_row==0)
         echo "<script>alert('用户不存在！')</script>";
     else
